@@ -10,7 +10,7 @@ const discord = async (req, res) => {
   client.on('ready', async () => {
     const parsedMessage = htp(message)
 
-    const sentMessage = "\n=============================\n\n" + parsedMessage.replace(/[^\w\s]/g, ' ').replace(/\s{2,}/g, '\n') + "\n\n============================="
+    const sentMessage = "=============================\n\n" + parsedMessage.replace(/[^\w\s]/g, ' ').replace(/\s{2,}/g, '\n') + "\n\n============================="
     
     const thread = client.channels.cache.get(threadId);
 
