@@ -14,7 +14,7 @@ const discord = async (req, res) => {
     
     const thread = client.channels.cache.get(threadId);
 
-    const messages = await thread.messages.fetch({ limit: 10});
+    const messages = await thread.messages.fetch({ limit: 30});
 
     for(const [key, prevMessage] of messages){
       if(prevMessage.content === sentMessage)return res.status(200).json({message: "Already notified"})
