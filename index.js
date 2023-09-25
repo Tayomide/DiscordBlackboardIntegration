@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 
 // Add endpoints
 
-app.use('/discord', discord)
+app.post('/discord', discord)
 
 const PORT = 5000;
 
